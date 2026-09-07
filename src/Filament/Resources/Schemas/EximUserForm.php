@@ -160,6 +160,7 @@ class EximUserForm
                         Hidden::make('pop'),
                         Password::make('crypt')
                             ->label('Password')
+                            ->autocomplete('new-password')
                             ->copyable()
                             ->regeneratePassword(color: 'success')                      
                             ->dehydrateStateUsing(fn ($state) => Hash::make($state))
